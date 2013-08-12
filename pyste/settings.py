@@ -108,9 +108,7 @@ ROOT_URLCONF = 'pyste.urls'
 WSGI_APPLICATION = 'pyste.wsgi.application'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+   "/home/karan/Desktop/pyste/pyste/templates", 
 )
 
 INSTALLED_APPS = (

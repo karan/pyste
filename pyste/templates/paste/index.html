@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+ 
+ 
+{% block title %} Paste Archive {% endblock %}
+ 
+{% block content %}
+    <h1> Paste Archive </h1>
+    {% for paste in pastes %}
+    <div class="paste">
+        <h3>
+            <a href="{{paste.get_absolute_url}}">
+                {{paste.title}}
+            </a>
+        </h3>
+        <p>
+        Posted on <time datetime="{{paste.created|date:"c"}}">{{paste.created|date}}</time>
+        </p>
+    </div>
+    {% endfor %}
+{% endblock %}

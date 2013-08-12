@@ -8,12 +8,12 @@ class Paste(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     slug = models.SlugField(unique=True, max_length=20)
 
+    class Meta:
+        ordering = ['-created']
 
-class Meta:
-    ordering = ['-created']
+    def __unicode__(self):
+        return self.title
 
-def __unicode__(self):
-    return u'%s' % self.title
-
-def get_absolute_url(self):
-    return reverse('blog.views.post', args=[self.slug])
+    def get_absolute_url(self):
+        return reverse('blog.views.post', args=[self.slug])
+    
